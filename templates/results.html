@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Land Use Query Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Land Use Query Results</h1>
+    
+    <div class="results-container">
+        <h2>Found {{ data.elements|length }} land use elements</h2>
+        
+        <div class="results-data">
+            {% if data.elements %}
+                {% for element in data.elements %}
+                    <div class="result-item">
+                        <h3>{{ element.type|title }}</h3>
+                        <p>ID: {{ element.id }}</p>
+                        {% if element.tags %}
+                            <p>Land use: {{ element.tags.landuse }}</p>
+                            {% for key, value in element.tags.items() %}
+                                {% if key != 'landuse' %}
+                                    <p>{{ key }}: {{ value }}</p>
+                                {% endif %}
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p>No land use data found in the specified area.</p>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="analysis-section">
+        <h2>Environmental Impact Analysis</h2>
+        <div class="impact-score">
+            <h3>Impact Score: {{ analysis.impact_score }}</h3>
+            <p>This score indicates the estimated human impact on marine environment</p>
+        </div>
+        
+        <div class="land-features">
+            <h3>Land Use Distribution</h3>
+            <ul>
+                <li>Residential Area: {{ analysis.land_features.residential_area }}</li>
+                <li>Industrial Area: {{ analysis.land_features.industrial_area }}</li>
+                <li>Commercial Area: {{ analysis.land_features.commercial_area }}</li>
+            </ul>
+        </div>
+        
+        <div class="plastic-concentration">
+            <h3>Marine Plastic Concentration</h3>
+            <p>{{ analysis.plastic_concentration }} particles/km²</p>
+        </div>
+    </div>
+
+    <p><a href="{{ url_for('query') }}" class="button">New Query</a></p>
+    <p><a href="{{ url_for('index') }}" class="button">Back to Home</a></p>
+</body>
+</html> 

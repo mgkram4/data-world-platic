@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Marine Plastic & Land Use Query</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h1>Marine Plastic & Land Use Query</h1>
+  <p>Welcome to our data query app. Choose one of the options below:</p>
+  <ul>
+    <li><a href="{{ url_for('query') }}">Submit a Query (POST)</a></li>
+    <li><a href="{{ url_for('api_query') }}?lat=40&lon=-74&radius=1000">API Example (GET)</a></li>
+  </ul>
+</body>
+</html>
