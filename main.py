@@ -53,7 +53,21 @@ def get_marine_plastic_data(lat, lon, radius, coastal_distance):
         # Asia-Pacific
         'tokyo': {'lat': 35.6762, 'lon': 139.6503, 'profile': developed_high},
         'singapore': {'lat': 1.3521, 'lon': 103.8198, 'profile': developed_high},
-        'sydney': {'lat': -33.8688, 'lon': 151.2093, 'profile': developed_low}
+        'sydney': {'lat': -33.8688, 'lon': 151.2093, 'profile': developed_low},
+        
+        # Additional developed regions
+        'oslo': {'lat': 59.9139, 'lon': 10.7522, 'profile': developed_low},      # Norway
+        'melbourne': {'lat': -37.8136, 'lon': 144.9631, 'profile': developed_high}, # Australia
+        'hamburg': {'lat': 53.5511, 'lon': 9.9937, 'profile': developed_high},   # Germany
+        'busan': {'lat': 35.1796, 'lon': 129.0756, 'profile': developed_high},   # South Korea
+        'auckland': {'lat': -36.8509, 'lon': 174.7645, 'profile': developed_low}, # New Zealand
+        
+        # New additional developed regions (each from a different country)
+        'stockholm': {'lat': 59.3293, 'lon': 18.0686, 'profile': developed_low},    # Sweden
+        'lisbon': {'lat': 38.7223, 'lon': -9.1393, 'profile': developed_high},      # Portugal
+        'montreal': {'lat': 45.5017, 'lon': -73.5673, 'profile': developed_high},   # Canada
+        'haifa': {'lat': 32.7940, 'lon': 34.9896, 'profile': developed_high},       # Israel
+        'dublin': {'lat': 53.3498, 'lon': -6.2603, 'profile': developed_low}        # Ireland
     }
 
     developing_regions = {
@@ -69,7 +83,21 @@ def get_marine_plastic_data(lat, lon, radius, coastal_distance):
         
         # South America
         'rio': {'lat': -22.9068, 'lon': -43.1729, 'profile': developing_high},
-        'lima': {'lat': -12.0464, 'lon': -77.0428, 'profile': developing_high}
+        'lima': {'lat': -12.0464, 'lon': -77.0428, 'profile': developing_high},
+        
+        # Additional developing regions
+        'karachi': {'lat': 24.8607, 'lon': 67.0011, 'profile': developing_high}, # Pakistan
+        'ho_chi_minh': {'lat': 10.8231, 'lon': 106.6297, 'profile': developing_high}, # Vietnam
+        'chennai': {'lat': 13.0827, 'lon': 80.2707, 'profile': developing_high}, # India
+        'dakar': {'lat': 14.7167, 'lon': -17.4677, 'profile': developing_low},  # Senegal
+        'havana': {'lat': 23.1136, 'lon': -82.3666, 'profile': developing_low},  # Cuba
+        
+        # New additional developing regions (each from a different country)
+        'yangon': {'lat': 16.8661, 'lon': 96.1951, 'profile': developing_high},    # Myanmar
+        'luanda': {'lat': -8.8389, 'lon': 13.2894, 'profile': developing_high},    # Angola
+        'chittagong': {'lat': 22.3569, 'lon': 91.7832, 'profile': developing_high}, # Bangladesh
+        'montevideo': {'lat': -34.9011, 'lon': -56.1645, 'profile': developing_low}, # Uruguay
+        'beirut': {'lat': 33.8938, 'lon': 35.5018, 'profile': developing_high}      # Lebanon
     }
 
     # Find nearest region and its profile
@@ -214,7 +242,9 @@ def analyze_land_use(land_use_data):
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    author = "Ruitong Yan"
+    school = "High School Attached to Northeast Normal University"
+    return render_template('index.html', author=author, school=school)
 
 @app.route('/query', methods=['GET', 'POST'])
 def query():

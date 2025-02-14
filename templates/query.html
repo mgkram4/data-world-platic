@@ -13,44 +13,68 @@
 <body>
   <h1>Query Land Use Data</h1>
   
-  <!-- Add preset locations for developed countries -->
+  <!-- Add preset locations for developed countries (20) -->
   <div class="preset-locations">
     <h3>Coastal Cities (Developed Countries):</h3>
-    <button onclick="setLocation('San Francisco, USA', 37.7749, -122.4194)">San Francisco</button>
-    <button onclick="setLocation('Vancouver, Canada', 49.2827, -123.1207)">Vancouver</button>
-    <button onclick="setLocation('Sydney, Australia', -33.8688, 151.2093)">Sydney</button>
-    <button onclick="setLocation('Tokyo, Japan', 35.6762, 139.6503)">Tokyo</button>
-    <button onclick="setLocation('Barcelona, Spain', 41.3851, 2.1734)">Barcelona</button>
-    <button onclick="setLocation('Copenhagen, Denmark', 55.6761, 12.5683)">Copenhagen</button>
-    <button onclick="setLocation('Rotterdam, Netherlands', 51.9225, 4.4792)">Rotterdam</button>
-    <button onclick="setLocation('Marseille, France', 43.2965, 5.3698)">Marseille</button>
-    <button onclick="setLocation('Hamburg, Germany', 53.5511, 9.9937)">Hamburg</button>
-    <button onclick="setLocation('Oslo, Norway', 59.9139, 10.7522)">Oslo</button>
-    <button onclick="setLocation('Tel Aviv, Israel', 32.0853, 34.7818)">Tel Aviv</button>
-    <button onclick="setLocation('Auckland, New Zealand', -36.8509, 174.7645)">Auckland</button>
-    <button onclick="setLocation('Singapore', 1.3521, 103.8198)">Singapore</button>
-    <button onclick="setLocation('Dubai, UAE', 25.2048, 55.2708)">Dubai</button>
-    <button onclick="setLocation('Miami, USA', 25.7617, -80.1918)">Miami</button>
+    <div class="button-grid">
+      <!-- North America (5) -->
+      <button onclick="setLocation('San Francisco, USA', 37.7749, -122.4194)">San Francisco (West)</button>
+      <button onclick="setLocation('Miami, USA', 25.7617, -80.1918)">Miami (East)</button>
+      <button onclick="setLocation('Seattle, USA', 47.6062, -122.3321)">Seattle (West)</button>
+      <button onclick="setLocation('Vancouver, Canada', 49.2827, -123.1207)">Vancouver (Pacific)</button>
+      <button onclick="setLocation('Montreal, Canada', 45.5017, -73.5673)">Montreal (Atlantic)</button>
+
+      <!-- Europe (8) -->
+      <button onclick="setLocation('Rotterdam, Netherlands', 51.9225, 4.4792)">Rotterdam (North)</button>
+      <button onclick="setLocation('Hamburg, Germany', 53.5511, 9.9937)">Hamburg (North)</button>
+      <button onclick="setLocation('Marseille, France', 43.2965, 5.3698)">Marseille (Med)</button>
+      <button onclick="setLocation('Barcelona, Spain', 41.3851, 2.1734)">Barcelona (Med)</button>
+      <button onclick="setLocation('Piraeus, Greece', 37.9422, 23.6466)">Piraeus (Med)</button>
+      <button onclick="setLocation('Genoa, Italy', 44.4056, 8.9463)">Genoa (Med)</button>
+      <button onclick="setLocation('Copenhagen, Denmark', 55.6761, 12.5683)">Copenhagen (Baltic)</button>
+      <button onclick="setLocation('Bergen, Norway', 60.3913, 5.3221)">Bergen (Atlantic)</button>
+
+      <!-- Asia Pacific (7) -->
+      <button onclick="setLocation('Tokyo, Japan', 35.6762, 139.6503)">Tokyo (East)</button>
+      <button onclick="setLocation('Osaka, Japan', 34.6937, 135.5023)">Osaka (South)</button>
+      <button onclick="setLocation('Busan, South Korea', 35.1796, 129.0756)">Busan (South)</button>
+      <button onclick="setLocation('Sydney, Australia', -33.8688, 151.2093)">Sydney (East)</button>
+      <button onclick="setLocation('Melbourne, Australia', -37.8136, 144.9631)">Melbourne (South)</button>
+      <button onclick="setLocation('Auckland, New Zealand', -36.8509, 174.7645)">Auckland (Pacific)</button>
+      <button onclick="setLocation('Singapore', 1.3521, 103.8198)">Singapore</button>
+    </div>
   </div>
 
-  <!-- Add preset locations for developing countries -->
+  <!-- Add preset locations for developing countries (20) -->
   <div class="preset-locations">
     <h3>Coastal Cities (Developing Countries):</h3>
-    <button onclick="setLocation('Mumbai, India', 19.0760, 72.8777)">Mumbai</button>
-    <button onclick="setLocation('Lagos, Nigeria', 6.5244, 3.3792)">Lagos</button>
-    <button onclick="setLocation('Manila, Philippines', 14.5995, 120.9842)">Manila</button>
-    <button onclick="setLocation('Rio de Janeiro, Brazil', -22.9068, -43.1729)">Rio de Janeiro</button>
-    <button onclick="setLocation('Jakarta, Indonesia', -6.2088, 106.8456)">Jakarta</button>
-    <button onclick="setLocation('Karachi, Pakistan', 24.8607, 67.0011)">Karachi</button>
-    <button onclick="setLocation('Alexandria, Egypt', 31.2001, 29.9187)">Alexandria</button>
-    <button onclick="setLocation('Havana, Cuba', 23.1136, -82.3666)">Havana</button>
-    <button onclick="setLocation('Lima, Peru', -12.0464, -77.0428)">Lima</button>
-    <button onclick="setLocation('Chennai, India', 13.0827, 80.2707)">Chennai</button>
-    <button onclick="setLocation('Dakar, Senegal', 14.7167, -17.4677)">Dakar</button>
-    <button onclick="setLocation('Chittagong, Bangladesh', 22.3569, 91.7832)">Chittagong</button>
-    <button onclick="setLocation('Casablanca, Morocco', 33.5731, -7.5898)">Casablanca</button>
-    <button onclick="setLocation('Da Nang, Vietnam', 16.0544, 108.2022)">Da Nang</button>
-    <button onclick="setLocation('Luanda, Angola', -8.8389, 13.2894)">Luanda</button>
+    <div class="button-grid">
+      <!-- Asia (8) -->
+      <button onclick="setLocation('Shanghai, China', 31.2304, 121.4737)">Shanghai (East)</button>
+      <button onclick="setLocation('Guangzhou, China', 23.1291, 113.2644)">Guangzhou (South)</button>
+      <button onclick="setLocation('Mumbai, India', 19.0760, 72.8777)">Mumbai (West)</button>
+      <button onclick="setLocation('Chennai, India', 13.0827, 80.2707)">Chennai (East)</button>
+      <button onclick="setLocation('Jakarta, Indonesia', -6.2088, 106.8456)">Jakarta (Java)</button>
+      <button onclick="setLocation('Ho Chi Minh City, Vietnam', 10.8231, 106.6297)">Ho Chi Minh City</button>
+      <button onclick="setLocation('Manila, Philippines', 14.5995, 120.9842)">Manila (Pacific)</button>
+      <button onclick="setLocation('Karachi, Pakistan', 24.8607, 67.0011)">Karachi (Arabian)</button>
+
+      <!-- Africa (6) -->
+      <button onclick="setLocation('Lagos, Nigeria', 6.5244, 3.3792)">Lagos (Atlantic)</button>
+      <button onclick="setLocation('Alexandria, Egypt', 31.2001, 29.9187)">Alexandria (Med)</button>
+      <button onclick="setLocation('Cape Town, South Africa', -33.9249, 18.4241)">Cape Town (Atlantic)</button>
+      <button onclick="setLocation('Casablanca, Morocco', 33.5731, -7.5898)">Casablanca (Atlantic)</button>
+      <button onclick="setLocation('Mombasa, Kenya', -4.0435, 39.6682)">Mombasa (Indian)</button>
+      <button onclick="setLocation('Dakar, Senegal', 14.7167, -17.4677)">Dakar (Atlantic)</button>
+
+      <!-- South/Central America (6) -->
+      <button onclick="setLocation('Rio de Janeiro, Brazil', -22.9068, -43.1729)">Rio (Atlantic)</button>
+      <button onclick="setLocation('Santos, Brazil', -23.9618, -46.3322)">Santos (Atlantic)</button>
+      <button onclick="setLocation('Lima, Peru', -12.0464, -77.0428)">Lima (Pacific)</button>
+      <button onclick="setLocation('Valparaiso, Chile', -33.0472, -71.6127)">Valparaiso (Pacific)</button>
+      <button onclick="setLocation('Cartagena, Colombia', 10.3932, -75.4832)">Cartagena (Caribbean)</button>
+      <button onclick="setLocation('Veracruz, Mexico', 19.2009, -96.1429)">Veracruz (Gulf)</button>
+    </div>
   </div>
 
   <form id="queryForm" onsubmit="fetchData(event)">
@@ -178,7 +202,6 @@
           <ul>
             <li><strong>X-axis:</strong> Ranges of plastic concentration values</li>
             <li><strong>Y-axis:</strong> Number of measurements in each range</li>
-            <li><strong>Current Status:</strong> ${data.analysis.plastic_concentration}</li>
           </ul>
           <p>The shape of the distribution indicates the variability and typical levels of plastic concentration in the area.</p>
         </div>
@@ -289,7 +312,7 @@
               callbacks: {
                 label: function(context) {
                   const total = counts.reduce((a, b) => a + b, 0);
-                  const percentage = ((context.raw / total) * 100).toFixed(1);
+                  const percentage = ((context.raw / total) * 100).toFixed(2);
                   return `${context.label}: ${context.raw} (${percentage}%)`;
                 }
               }
@@ -365,13 +388,13 @@
 
           // Update main metrics
           document.getElementById('residential-value').textContent = 
-            `${data.analysis.land_features.residential_area || data.analysis.land_features.residential}%`;
+            `${parseFloat(data.analysis.land_features.residential_area || data.analysis.land_features.residential).toFixed(2)}%`;
           document.getElementById('commercial-value').textContent = 
-            `${data.analysis.land_features.commercial_area || data.analysis.land_features.commercial}%`;
+            `${parseFloat(data.analysis.land_features.commercial_area || data.analysis.land_features.commercial).toFixed(2)}%`;
           document.getElementById('industrial-value').textContent = 
-            `${data.analysis.land_features.industrial_area || data.analysis.land_features.industrial}%`;
+            `${parseFloat(data.analysis.land_features.industrial_area || data.analysis.land_features.industrial).toFixed(2)}%`;
           document.getElementById('green-value').textContent = 
-            `${(data.analysis.land_features.natural + data.analysis.land_features.recreational)}%`;
+            `${(parseFloat(data.analysis.land_features.natural) + parseFloat(data.analysis.land_features.recreational)).toFixed(2)}%`;
 
           // Update charts
           updateCharts(data);
@@ -503,7 +526,7 @@
       for (let i = 0; i < binCount; i++) {
         const binStart = min + (i * binWidth);
         const binEnd = binStart + binWidth;
-        binLabels.push(`${binStart.toFixed(1)}-${binEnd.toFixed(1)}`);
+        binLabels.push(`${binStart.toFixed(2)}-${binEnd.toFixed(2)}`);
       }
       
       // Fill bins
@@ -573,7 +596,7 @@
       const max = Math.max(...historicalData);
       const percentile90 = sortedData[Math.floor(sortedData.length * 0.9)];
 
-      // Update DOM elements
+      // Update DOM elements with 2 decimal places
       document.getElementById('plastic-sample-count').textContent = historicalData.length;
       document.getElementById('plastic-mean').textContent = mean.toFixed(2);
       document.getElementById('plastic-median').textContent = median.toFixed(2);
@@ -608,23 +631,101 @@
   <style>
     .preset-locations {
       margin: 20px 0;
-      padding: 10px;
+      padding: 15px;
       background: #f5f5f5;
-      border-radius: 5px;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
     
+    .preset-locations h3 {
+      color: #2c3e50;
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #e0e0e0;
+    }
+
+    .button-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 10px;
+      max-height: 300px;
+      overflow-y: auto;
+      padding: 10px;
+    }
+
     .preset-locations button {
-      margin: 5px;
-      padding: 8px 15px;
+      width: 100%;
+      padding: 10px;
       background: #4CAF50;
       color: white;
       border: none;
-      border-radius: 4px;
+      border-radius: 6px;
       cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 14px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
     }
-    
+
     .preset-locations button:hover {
       background: #45a049;
+      transform: translateY(-2px);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    @media (max-width: 768px) {
+      .button-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        max-height: 400px;
+      }
+
+      .preset-locations button {
+        padding: 12px 8px;
+        font-size: 13px;
+      }
+
+      .main-metrics {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .plastic-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .area-stats-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .charts-section {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .button-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .main-metrics {
+        grid-template-columns: 1fr;
+      }
+
+      .metric-card {
+        padding: 15px;
+      }
+
+      .large-number {
+        font-size: 24px;
+      }
+
+      #map {
+        height: 300px;
+      }
     }
 
     .stats-grid {
